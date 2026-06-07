@@ -39,3 +39,12 @@ $$\sigma_l = \frac{\sqrt{n}\cdot \ln(R)} {t(k-1, 0.975)}$$
   
 And since the geometric coefficient of variance (GCV) is $\text{GCV} = \sqrt{\exp{(\sigma_l^2)} ~– 1}$
 We are able to solve for GCV, and Convert between the different statistics.
+
+### Functions Defined:
+
+`GSV2CI` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Confidence interval.
+
+`GSV2GSD` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Geometric Standard Deviation.
+
+
+
