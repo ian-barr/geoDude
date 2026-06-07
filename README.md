@@ -29,7 +29,7 @@ Dividing the upper limit by the mean gives
    
 $$\frac{\exp(\mu_l + t(k-1, 0.975)\cdot sem_l)}{\exp(\mu_l )} = \exp(t(k-1, 0.975)\cdot sem_l)$$
    
-So, if we divide the upper interval limit by the Geometric Mean, calling that result $R$, we will be able to get an estimate of the $sem_l$:
+Calling that result $R$, we will be able to get an estimate of the $sem_l$:
 
 $$sem_l = \frac{\ln(R)} {t(k-1, 0.975)}$$
    
@@ -37,5 +37,5 @@ Including the definition for $sem_l$ lets us solve for $\sigma_l$:
  
 $$\sigma_l = \frac{\sqrt{n}\cdot \ln(R)} {t(k-1, 0.975)}$$
   
-- And since the geometric coefficient of variance (GCV) is $\text{GCV} = \sqrt{\exp{(\sigma_l^2)} ~– 1}$
-We are able to solve for GCV.
+And since the geometric coefficient of variance (GCV) is $\text{GCV} = \sqrt{\exp{(\sigma_l^2)} ~– 1}$
+We are able to solve for GCV, and Convert between the different statistics.
