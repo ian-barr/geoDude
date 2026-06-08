@@ -1,3 +1,55 @@
+#' GMEAN
+#'
+#' This function calculates Geometric Standard Deviation from a set of data
+#' @param x Data points, as a vector-like object
+#' @keywords GMEAN
+#' @return GMEAN
+#' @export
+#' @examples
+#' GMEAN()
+GMEAN <- function(x){
+  if (length(x) > 1){
+    gmean <- exp(mean(log(x)))
+  } else {
+    print( "Need 2 or more data points")
+  }
+  return(gmean)
+}
+#' GSD
+#'
+#' This function calculates Geometric Standard Deviation from a set of data
+#' @param x Geometric Standard Deviation
+#' @keywords GSD
+#' @return GSD
+#' @export
+#' @examples
+#' GSD()
+GSD <- function(x){
+  if (length(x) > 1){
+    gsd <- exp(sd(log(x)))
+  } else {
+    print( "Need 2 or more data points")
+  }
+  return(gsd)
+}
+#' GSEM
+#'
+#' This function calculates Geometric SEM from a set of data
+#' @param x Data points, as a vector-like object
+#' @keywords GSEM
+#' @return GSEM
+#' @export
+#' @examples
+#' GSEM()
+GSEM <- function(x){
+  l <- length(x)
+  if (l > 1){
+    gsem <- exp(sd(log(x))/(l-1))
+  } else {
+    print( "Need 2 or more data points")
+  }
+  return(gsem)
+}
 #' GCV2GSD
 #'
 #' This function converts Geometric Coefficient of Variation to Geometric SD
@@ -10,10 +62,10 @@
 #' GCV2GSD()
 GCV2GSD <- function(GCV,percent=FALSE){
   if(percent){GCV <- GCV/100.}
-  return ( exp (sqrt(  log((GCV)^2 + 1.0)) ))
+  return ( exp (sqrt(  log1p(GCV^2)) ))
 }
 
-#' GCV2GSD
+#' kGCV2GSD
 #'
 #' This function converts Geometric Coefficient of Variation to Geometric SD,
 #' using the formula of Kirkwood (1982)
@@ -26,7 +78,7 @@ GCV2GSD <- function(GCV,percent=FALSE){
 #' kGCV2GSD()
 kGCV2GSD <- function(GCV,percent=FALSE){ ## kirkwood version
   if(percent){GCV <- GCV/100.}
-  return ( exp (  log((GCV) + 1.0) ))
+  return ( exp (  log1p(GCV) ))
 }
 
 #' GSD2GSEM
@@ -55,7 +107,7 @@ GSD2GSEM <- function(GSD,df){
 #' GCV2GSEM()
 GCV2GSEM <- function(GCV,df,percent=FALSE){
   if(percent){GCV <- GCV/100.}
-  return ( exp(sqrt(  log((GCV)^2 + 1.0)) / sqrt(df) ))
+  return ( exp(sqrt(  log1p(GCV^2)) / sqrt(df) ))
 }
 #' GCV2CI
 #'
@@ -72,7 +124,7 @@ GCV2GSEM <- function(GCV,df,percent=FALSE){
 #' GCV2CI()
 GCV2CI <- function(GCV,df,m,alpha,percent = FALSE){
   if(percent){GCV <- GCV/100.}
-  gsem <- exp(sqrt(  log((GCV)^2 + 1.0)) / sqrt(df))
+  gsem <- exp(sqrt(  log1p(GCV^2)) / sqrt(df))
   qs <- qt(alpha/2. , df=df,lower.tail = TRUE)
   CI <- gsem * c(qs,-qs)
   return(exp(log(m) - CI))
@@ -99,5 +151,5 @@ CI2GCV <- function(CI,df,m,alpha,percent = FALSE){
   qn <- qt(alpha/2. , df=df,lower.tail = TRUE)
   sdp <- sqrt(df)*log(CIp) / qp
   sdn <- sqrt(df)*log(CIn) / qn
-  return(  f*c( sqrt(exp(sdn^2)-1.0), sqrt(exp(sdp^2)-1.0) ))
+  return(  f*c( sqrt(expm1(sdn^2)), sqrt(exp(sdp^2)-1.0) ))
 }
