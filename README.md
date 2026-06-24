@@ -42,9 +42,22 @@ We are able to solve for GCV, and Convert between the different statistics.
 
 ### Functions Defined:
 
-`GSV2CI` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Confidence interval.
+`GMEAN` : Calculates Geometric Mean of a set of data points.
 
-`GSV2GSD` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Geometric Standard Deviation.
+`GSD` : Calculates Geometric Mean of a set of data points.
 
+`GSEM` : Calculates Geometric Mean of a set of data points.
+
+`GCV2GCI` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Confidence interval.
+
+`kGCV2GSD` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Confidence interval using the definition of Kirkwood (1982).
+
+`GCV2GSD` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Geometric Standard Deviation.
+
+`GCI2GCV` : Converts Geometric Confidence Interval to Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`).
+
+`GCV2GSEM` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Geometric Standard Error of the Mean
+
+`GSD2GSEM` : Converts Geometric Standard Deviation to Geometric Standard Error of the Mean
 
 
