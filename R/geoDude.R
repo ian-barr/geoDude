@@ -155,5 +155,5 @@ GCI2GCV <- function(GCI,df,gmn,alpha=0.05, percent = FALSE){
   qn <- qt(alpha/2. , df=df,lower.tail = TRUE)
   sdp <- sqrt(df)*log(CIp) / qp
   sdn <- sqrt(df)*log(CIn) / qn
-  return(  f*c( sqrt(expm1(sdn^2)), sqrt(expm1(sdp^2)) ))
+  return(  list( "using.lower"=f*sqrt(expm1(sdn^2)), "using.upper"=f*sqrt(expm1(sdp^2)) ))
 }
