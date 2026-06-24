@@ -44,9 +44,11 @@ We are able to solve for GCV, and Convert between the different statistics.
 
 `GMEAN` : Calculates Geometric Mean of a set of data points.
 
-`GSD` : Calculates Geometric Mean of a set of data points.
+`GSD` : Calculates Geometric Standard Deviation of a set of data points.
 
-`GSEM` : Calculates Geometric Mean of a set of data points.
+`GSEM` : Calculates Geometric Standard Error of the Mean of a set of data points.
+
+`GCV` : Calculates Geometric Coefficient of Variation of a set of data points.
 
 `GCV2GCI` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Confidence interval.
 
