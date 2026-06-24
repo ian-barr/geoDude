@@ -9,7 +9,7 @@ $$\mu_l = \frac{1}{n}\sum_i^n  \ln(X_i)$$
 
 The geometric standard deviation (GSD) is $\exp{(\sigma_l)}$ where
 
-$$\sigma_l = \sqrt{\frac{\sum_i^n \left ( \ln(X_i) - \ln(\mu_l) \right )^2}{n-1} }$$
+$$\sigma_l = \sqrt{\frac{\sum_i^n \left ( \ln(X_i) - \mu_l \right )^2}{n-1} }$$
 
 The geometric standard error of the mean (GSEM) is $\exp{(sem_l)}$ where 
 
