@@ -52,7 +52,7 @@ We are able to solve for GCV, and Convert between the different statistics.
 
 `GCV2GCI` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Confidence interval.
 
-`kGCV2GSD` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Confidence interval using the definition of Kirkwood (1982).
+`kGCV2GSD` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Confidence interval using the definition of Kirkwood (1979) *Biometrics*.
 
 `GCV2GSD` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Geometric Standard Deviation.
 
