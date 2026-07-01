@@ -50,7 +50,7 @@ We are able to solve for GCV, and Convert between the different statistics.
 
 `GCV` : Calculates Geometric Coefficient of Variation of a set of data points.
 
-`GCI` : Calculates Geometric Confidence Iterval of a set of data points.
+`GCI` : Calculates Geometric Confidence Interval of a set of data points.
 
 `GCV2GCI` : Converts Geometric Coefficient of Variation (expressed as a percentage if `percent = TRUE`) to Confidence interval.
 
