@@ -13,9 +13,9 @@ GMEAN(x)
 GMEAN
 }
 \description{
-This function calculates Geometric Standard Deviation from a set of data
+This function calculates Geometric Mean from a set of data
 }
 \examples{
-GMEAN()
+GMEAN((9:20)*10) ## Returns 140.729
 }
 \keyword{GMEAN}

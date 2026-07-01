@@ -16,6 +16,6 @@ GSEM
 This function calculates Geometric SEM from a set of data
 }
 \examples{
-GSEM()
+GSEM((9:20)*10) ## Returns 1.077717
 }
 \keyword{GSEM}

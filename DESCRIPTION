@@ -1,6 +1,6 @@
 Package: geoDude
 Title: Conversion between Geometric Statistics
-Version: 0.1.1
+Version: 0.1.2
 Author: Ian Barr
 Authors@R: person("Barr", "Ian", email = "ian.barr.lab@gmail.com",
   role = c("aut", "cre"))

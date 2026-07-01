@@ -16,7 +16,7 @@ GSD
 }
 \description{
 This function converts Geometric Coefficient of Variation to Geometric SD,
-using the formula of Kirkwood (1982)
+using the formula of Kirkwood, TBL (1979) Biometrics, Vol. 35, pp. 908-909
 }
 \examples{
 kGCV2GSD()

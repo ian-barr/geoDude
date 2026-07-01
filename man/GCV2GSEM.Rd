@@ -4,12 +4,12 @@
 \alias{GCV2GSEM}
 \title{GCV2GSEM}
 \usage{
-GCV2GSEM(GCV, df, percent = FALSE)
+GCV2GSEM(GCV, n, percent = FALSE)
 }
 \arguments{
 \item{GCV}{Geometric Coefficient of Variation}
 
-\item{df}{degrees of freedom (or number of data points)}
+\item{n}{degrees of freedom (or number of data points)}
 
 \item{percent}{Is the GCV expressed as a percent? Defaults to FALSE.}
 }

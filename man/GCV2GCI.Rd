@@ -4,12 +4,12 @@
 \alias{GCV2GCI}
 \title{GCV2GCI}
 \usage{
-GCV2GCI(GCV, df, gmn, alpha = 0.05, percent = FALSE)
+GCV2GCI(GCV, n, gmn, alpha = 0.05, percent = FALSE)
 }
 \arguments{
 \item{GCV}{Geometric Coefficient of Variation}
 
-\item{df}{degrees of freedom (or number of data points)}
+\item{n}{degrees of freedom (or number of data points)}
 
 \item{gmn}{geometric mean of the samples}
 
@@ -21,10 +21,10 @@ GCV2GCI(GCV, df, gmn, alpha = 0.05, percent = FALSE)
 GSEM
 }
 \description{
-This function converts Geometric Coefficient of Variation to Geometric SEM
+This function converts Geometric Coefficient of Variation to Geometric Confidence Interval
 }
 \examples{
-GCV2GCI()
+GCV2GCI(GCV=0.25,n=10,gmn=75.0) ## Returns 62.88782, 89.44499
 }
 \keyword{GCI}
 \keyword{GCV,}

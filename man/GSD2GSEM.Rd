@@ -4,12 +4,12 @@
 \alias{GSD2GSEM}
 \title{GSD2GSEM}
 \usage{
-GSD2GSEM(GSD, df)
+GSD2GSEM(GSD, n)
 }
 \arguments{
 \item{GSD}{Geometric Standard Deviation}
 
-\item{df}{degrees of freedom (or number of data points)}
+\item{n}{degrees of freedom (or number of data points)}
 }
 \value{
 GSEM

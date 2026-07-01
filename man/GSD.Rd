@@ -16,6 +16,6 @@ GSD
 This function calculates Geometric Standard Deviation from a set of data
 }
 \examples{
-GSD()
+GSD((9:20)*10) ## Returns 1.295986
 }
 \keyword{GSD}
