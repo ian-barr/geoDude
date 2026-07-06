@@ -37,7 +37,7 @@ Including the definition for $sem_l$ lets us solve for $\sigma_l$:
  
 $$\sigma_l = \frac{\sqrt{n}\cdot \ln(R)} {t(n-1, 0.975)}$$
   
-And since the geometric coefficient of variance (GCV) is $\text{GCV} = \sqrt{\exp{(\sigma_l^2)} ~– 1}$
+And since the geometric coefficient of variation (GCV) is $\text{GCV} = \sqrt{\exp{(\sigma_l^2)} ~– 1}$
 We are able to solve for GCV, and Convert between the different statistics.
 
 ### Functions Defined:
