@@ -58,10 +58,6 @@ and the Variance is
 
 $$   V = E \left [(x- E[x])^2 \right ] =  \left ( \exp \left ( \sigma^2 \right ) -1 \right ) \cdot \exp \left ( 2\mu + \sigma^2 \right ) = \left ( \exp \left ( \sigma^2 \right ) -1 \right ) \cdot m^2$$
 
-$$\textrm{GMEAN}(m,V) = \exp{(\mu)}; ~\mu = 2 \ln(m) - \ln \left (\sqrt{V + m^2} \right )$$
-
-$$\textrm{GSD}(m,V) = \exp(\sigma); ~\sigma = \sqrt{\ln(1 + V/m^2)}$$
-
 By solving for $\mu$ and $\sigma$ in the above equations, we are able to get estimates for the geometric mean and standard deviation:
 
 $$\textrm{GMEAN}(m,V) = \exp{(\mu)}; ~\mu = 2 \ln(m) - \ln \left (\sqrt{V + m^2} \right )$$
