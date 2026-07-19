@@ -40,6 +40,37 @@ $$\sigma_l = \frac{\sqrt{n}\cdot \ln \left (\sqrt{R} \right )} {t(n-1, 0.975)}$$
 And since the geometric coefficient of variation (GCV) is $\text{GCV} = \sqrt{\exp{(\sigma_l^2)} ~– 1}$
 We are able to solve for GCV, and Convert between the different statistics.
 
+### Using the Method of Moments
+
+The Method of Moments is a technique for estimating the parameters of a distribution based on the moments of the distribution, typically the first and second (mean and variance). 
+
+In order to estimate the geometric mean, SD, CIs, etc, a few assumptions will be made:
+
+1. that the underlying distribution is log-normal
+
+2. That the variance is sufficiently small so that the overall error is small.
+
+The median of a lognormal distribution is $\exp(\mu)$, where $\mu$ is the log-mean of the distribution. This means that for a lognormal distribution, the geometric mean and the median are equal. The lognormal distribution has two parameters $\mu$ and $\sigma$, and is defined over the interval $(0,\infty)$. The mean of the distribution is 
+
+$$   m = E[x] =  \exp \left (\mu + \frac{\sigma^2}{2} \right ) $$
+
+and the Variance is 
+
+$$   V = E \left [(x- E[x])^2 \right ] =  \left ( \exp \left ( \sigma^2 \right ) -1 \right ) \cdot \exp \left ( 2\mu + \sigma^2 \right ) = \left ( \exp \left ( \sigma^2 \right ) -1 \right ) \cdot m^2$$
+
+$$\textrm{GMEAN}(m,V) = \exp{(\mu)}; ~\mu = 2 \ln(m) - \ln \left (\sqrt{V + m^2} \right )$$
+
+$$\textrm{GSD}(m,V) = \exp(\sigma); ~\sigma = \sqrt{\ln(1 + V/m^2)}$$
+
+By solving for $\mu$ and $\sigma$ in the above equations, we are able to get estimates for the geometric mean and standard deviation:
+
+$$\textrm{GMEAN}(m,V) = \exp{(\mu)}; ~\mu = 2 \ln(m) - \ln \left (\sqrt{V + m^2} \right )$$
+
+$$\textrm{GSD}(m,V) = \exp(\sigma); ~\sigma = \sqrt{\ln(1 + V/m^2)}$$
+
+So we are able to convert reported arithmetic means and standard deviations into estimates of their geometric counterparts. There is, however, some associated error. 
+
+
 ### Functions Defined:
 
 `GMEAN` : Calculates Geometric Mean of a set of data points.
