@@ -25,17 +25,17 @@ This means that the ends of the confidence intervals are
    
 $$\exp(\mu_l - t(n-1, 0.975)\cdot sem_l), ~ \exp(\mu_l + t(n-1, 0.975)\cdot sem_l)$$
    
-Dividing the upper limit by the mean gives
+Dividing the upper limit by the lower limit gives
    
-$$\frac{\exp(\mu_l + t(n-1, 0.975)\cdot sem_l)}{\exp(\mu_l )} = \exp(t(n-1, 0.975)\cdot sem_l)$$
+$$\frac{\exp(\mu_l + t(n-1, 0.975)\cdot sem_l)}{\exp(\mu_l - t(n-1, 0.975)\cdot sem_l)} = \exp(2 \cdot t(n-1, 0.975)\cdot sem_l)$$
    
 Calling that result $R$, we will be able to get an estimate of the $sem_l$:
 
-$$sem_l = \frac{\ln(R)} {t(n-1, 0.975)}$$
+$$sem_l = \frac{\ln \left (\sqrt{R} \right )} {t(n-1, 0.975)}$$
    
 Including the definition for $sem_l$ lets us solve for $\sigma_l$:
  
-$$\sigma_l = \frac{\sqrt{n}\cdot \ln(R)} {t(n-1, 0.975)}$$
+$$\sigma_l = \frac{\sqrt{n}\cdot \ln \left (\sqrt{R} \right )} {t(n-1, 0.975)}$$
   
 And since the geometric coefficient of variation (GCV) is $\text{GCV} = \sqrt{\exp{(\sigma_l^2)} ~– 1}$
 We are able to solve for GCV, and Convert between the different statistics.
